@@ -1,0 +1,85 @@
+<div style='width:100%; height:100%; background-color:#FFFFFF;'>
+
+	<!-- Mobile View -->
+	<div class="hidden-desktop visible-tablet" style='padding:5px 0px; width:100%; height:100%; padding:45px 0px 0px 0px; position:relative;'>
+		<div style="height:45px; width:100%; position:absolute; top:0px; left:0px">
+			<div style='padding:6px 10px;'>
+				<h1 class="page-title txt-color-blueDark visible-lg visible-md pull-left">
+					<i class="fa fa-fw fa-inbox"></i> Inbox &nbsp;
+				</h1>
+				<div class="btn-group hidden-lg hidden-md">
+					<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span id="folderSelect">Inbox </span> <i class="fa fa-caret-down"></i>
+					</button>
+					<ul class="dropdown-menu pull-left" id="mobfolder">
+						<li id="mfl_Inbox">
+							<a class="inbox-load" onclick="getDataFromFolder('Inbox');">Inbox  <i class="fa fa-check"></i>
+							</a>
+						</li>
+						<li id="mfl_Sent">
+							<a onclick="getDataFromFolder('Sent');">Sent</a>
+						</li>
+						<li id="mfl_Draft">
+							<a onclick="getDataFromFolder('Draft');">Draft</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li id="mfl_Spam">
+							<a onclick="getDataFromFolder('Spam');">Spam </a>
+						</li>
+						<li id="mfl_Trash">
+							<a onclick="getDataFromFolder('Trash');">Trash </a>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#/compose" class="btn btn-primary hidden-lg hidden-md">
+					<strong>Compose</strong>
+				</a>
+			</div>
+		</div>
+		<div style='padding:0px 0px; width:100%; height:100%;'>
+			<div style='height:100%; widht:100%;' ng-include='"views/partials/email-table.html"'></div>
+		</div>
+	</div>
+
+	<!-- Desktop and Tablet Mailbox -->
+	<div class="inbox-body no-content-padding visible-lg visible-md" id="inbox-content" style='height:100%; padding:0px 10px;'>
+
+		<!-- left mail nav - Desktop and Tablet -->
+		<div class="inbox-side-bar animated fast fadeInRight" style='height:100%; padding-top:90px; padding-bottom:45px; overflow:hidden;'>
+			<div class="inbox-side-bar-top" style='position:absolute; top:0px; left:13px; width:187px;'>
+				<h1 class="txt-color-blueDark hidden-tablet"><i class="fa fa-fw fa-inbox"></i> Mail &nbsp;</h1>
+				<a href='#/compose' class="btn btn-primary btn-block" style='width:100%;'><strong>Compose</strong></a>
+			</div>
+			<div style='height:100%; overflow:scroll;'>
+				<ul class="inbox-menu-lg">
+					<li class="active">
+						<a class="inbox-load">Inbox (14)</a>
+					</li>
+					<li>
+						<a>Sent</a>
+					</li>
+					<li>
+						<a>Draft</a>
+					</li>
+
+					<li>
+						<a>Trash</a>
+					</li>
+				</ul>
+			</div>
+			<div class="air air-bottom inbox-space" style='background-color:#FFFFFF; position:absolute; bottom:-10px; left:15px;'>
+				2 of <strong>2000</strong>
+				<div class="progress progress-micro">
+					<div class="progress-bar progress-primary" style="width: 34%;">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="table-wrap animated fast fadeInRight" style='height:100%; padding:5px 10px;'>
+			<div style='height:100%; widht:100%;' ng-include='"views/partials/email-table.html"'></div>
+		</div>
+	</div>
+</div>

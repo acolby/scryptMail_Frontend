@@ -1,0 +1,29 @@
+{
+  "name": "scryptMail_Frontend",
+  "main": "",
+  "version": "0.0.0",
+  "authors": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.20",
+    "angular-resource": "1.2.6",
+    "angular-cookies": "1.2.6",
+    "angular-sanitize": "1.2.6",
+    "angular-route": "1.2.6",
+    "angular-bootstrap": "0.11.0",
+    "jquery": "2.1.1",
+    "angular-ui": "0.4.0",
+    "font-awesome": "4.2.0",
+    "bootstrap-sass-twbs": "2.0.3",
+    "angular-summernote": "~0.3.0",
+    "summernote": "~0.6.0",
+    "ng-tags-input": "~2.1.1"
+  }
+}

@@ -1,0 +1,63 @@
+<style>
+.note-codable {
+	display:none;
+}
+.note-editor {
+	border: none;
+}
+</style>
+<div class="form-horizontal animated fast fadeInRight" id="email-compose-form" style='width:100%; height:100%; padding:0px 10px;' >
+
+	<div style='padding-top:20px;' class="email-open-header">
+		<h1 class="txt-color-blueDark no-padding no-margin"><i class="fa fa-fw fa-pencil"></i> Compose &nbsp;</h1>
+	</div>
+	<div class="inbox-info-bar no-padding" style='margin-right:0px;'>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col col-xs-1"><strong>To</strong></label>
+
+				<div style='padding-left:18px;' class="col col-xs-10">
+					<span>
+						<tags-input placeholder='Email Recipients' ng-model="tags" add-on-space="true" allowed-tags-pattern="/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i">
+							 <auto-complete source="loadTags()" highlight-matched-text='false' min-length='1'></auto-complete>
+						</tags-input>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="inbox-info-bar no-padding" style='margin-right:0px;'>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col col-xs-1"><strong>Subject</strong></label>
+
+				<div class="col col-xs-11">
+					<input class="form-control" placeholder="Email Subject" type="text" id="subj" maxlength="150">
+					<em><a href="javascript:void(0);" class="show-next" rel="tooltip" data-placement="bottom" data-original-title="Attachments"><i class="fa fa-paperclip fa-lg"></i></a></em>
+				</div>
+			</div>
+		</div>
+	</div>
+	<summernote config="options" ng-model='componseText'></summernote>
+	<!--
+	<div class="well-md well-light smart-form">
+		<ul class="list-inline" id="mailOptions">
+			<li>
+				
+				<label class="checkbox">
+					<input type="checkbox" name="subscription" id="pincheck" style="display:none;" onclick="generatePin('');">
+					<i style="margin:5px;"></i>
+					<span>&nbsp;Encrypt email sent to outside users like gmail or yahoo.</span> <span id="emailPin">
+					</span>
+				</label>
+
+			</li>
+		</ul>
+	</div>
+	-->
+	<div class="inbox-compose-footer" style='width:100%;'>
+		<button class="btn btn-primary">Send</button>
+		<button class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i></button>
+	</div>
+</div>

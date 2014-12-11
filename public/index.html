@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us" data-ng-app="smartApp"  style='height:100%; min-height:600px;'>
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> SmartAdmin </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="components/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="components/ng-tags-input/ng-tags-input.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="components/ng-tags-input/ng-tags-input.bootstrap.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	</head>
+	<body class="" data-ng-controller="BodyCtrl" style='height:100%;'>
+        <!--================================================== -->
+		<header id="header" data-ng-include="'views/partials/header.html'"></header>
+		<aside ng-controller='NavCtrl' id="left-panel"><span data-ng-include="'views/partials/left-panel.html'"></span></aside>
+		<div id="main" role="main" style='height:100%; position:relative; top:-50px; padding-top:50px; padding-bottom:50px; overflow:hidden; background-color:#FFFFFF;'>
+			<div id="ribbon" data-ng-include="'views/partials/ribbon.html'" style='z-index:10;'></div>
+			<!-- MAIN CONTENT VIEW -->
+			<div style='width:100%; height:100%; position:relative; top:-40px; padding-top:40px; overflow-y:scroll; overflow-x:hidden;'>
+				<div id="content" data-ng-view="" class="view-animate" style='height:100%; padding:0px;'></div>
+			</div>
+		</div>
+		<!-- PAGE FOOTER -->
+		<div class="page-footer"><span data-ng-include="'views/partials/footer.html'"></span></div>
+		<!--================================================== -->
+
+		<!-- Components -->
+		<script src="components/jquery/dist/jquery.js"></script>
+        <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="components/angular/angular.js"></script>
+	  	<script src="components/angular-route/angular-route.js"></script>
+	  	<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	  	<script src="components/summernote/dist/summernote.js"></script>
+	  	<script src="components/angular-summernote/dist/angular-summernote.min.js"></script>
+	  	<script src="components/angular-summernote/dist/angular-summernote.min.js"></script>
+	  	<script src="components/ng-tags-input/ng-tags-input.js"></script>	
+
+		<!-- Application Files -->
+	  	<script src="scripts/app.js"></script>
+	  	<script src="scripts/controllers/ng.controllers.js"></script>
+	  	<script src="scripts/directives/ng.directives.js"></script>
+
+	</body>
+
+</html>
